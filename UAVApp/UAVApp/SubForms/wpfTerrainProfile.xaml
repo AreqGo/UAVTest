@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Pipeline.Client.Forms.wpfTerrainProfile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d3="http://research.microsoft.com/DynamicDataDisplay/1.0"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"   HorizontalAlignment="Center">
+            <Label Content="操作：" Width="50" Height="30"  FontSize="15" ></Label>
+            <Button x:Name="btnChange" Content="切换" Margin="10,0,0,0" Width="50" Height="30" CommandTarget="{Binding ElementName=plotter}" RenderTransformOrigin="0.504,0.5" Click="Button_Click"></Button>
+            <Button Content="放大" Margin="10,0,0,0" Command="{x:Static d3:ChartCommands.ZoomIn}" Width="50" Height="30" CommandTarget="{Binding ElementName=plotter}"></Button>
+            <Button Content="缩小" Margin="10,0,0,0" Command="{x:Static d3:ChartCommands.ZoomOut}" Width="50" Height="30" CommandTarget="{Binding ElementName=plotter}"></Button>
+        </StackPanel>
+        <d3:ChartPlotter Name="plotter" Grid.Row="1" >
+            <d3:Header>
+                <TextBlock x:Name="tbName" HorizontalAlignment="Center" FontSize="20">俯视图</TextBlock>
+            </d3:Header>
+            <d3:VerticalAxisTitle>高程(米)</d3:VerticalAxisTitle>
+            <d3:HorizontalAxisTitle>水平距离(米)</d3:HorizontalAxisTitle>
+            <d3:ViewportUIContainer  Position="0,0" x:Name="_groupLabel">
+                <TextBlock Text="地面" Foreground="Blue"></TextBlock>
+            </d3:ViewportUIContainer>
+        </d3:ChartPlotter>
+
+    </Grid>
+</UserControl>

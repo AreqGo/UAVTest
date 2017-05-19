@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UAVApp", "UAVApp\UAVApp.csproj", "{78176195-CC1D-474C-9D10-BE421378D5DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchFolderApp", "WatchFolderApp\WatchFolderApp.csproj", "{CD4DD04C-2E2E-4DC6-9460-2D6DF4B04553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78176195-CC1D-474C-9D10-BE421378D5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78176195-CC1D-474C-9D10-BE421378D5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78176195-CC1D-474C-9D10-BE421378D5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78176195-CC1D-474C-9D10-BE421378D5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4DD04C-2E2E-4DC6-9460-2D6DF4B04553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4DD04C-2E2E-4DC6-9460-2D6DF4B04553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4DD04C-2E2E-4DC6-9460-2D6DF4B04553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4DD04C-2E2E-4DC6-9460-2D6DF4B04553}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
