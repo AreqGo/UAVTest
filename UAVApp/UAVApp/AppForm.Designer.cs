@@ -334,6 +334,19 @@
             this.xtpRes = new DevExpress.XtraTab.XtraTabPage();
             this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.fpCurrent = new DevExpress.Utils.FlyoutPanel();
+            this.flyoutPanelControl3 = new DevExpress.Utils.FlyoutPanelControl();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labTaskNO = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.fpRouteHistory = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl2 = new DevExpress.Utils.FlyoutPanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -366,19 +379,6 @@
             this.axTE3DWindow1 = new AxTerraExplorerX.AxTE3DWindow();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
-            this.flyoutPanelControl3 = new DevExpress.Utils.FlyoutPanelControl();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labTaskNO = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
@@ -422,6 +422,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.axTEInformationWindow1)).BeginInit();
             this.dockPanel3.SuspendLayout();
             this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fpCurrent)).BeginInit();
+            this.fpCurrent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl3)).BeginInit();
+            this.flyoutPanelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fpRouteHistory)).BeginInit();
             this.fpRouteHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl2)).BeginInit();
@@ -449,12 +455,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.axTE3DWindow1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
-            this.flyoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl3)).BeginInit();
-            this.flyoutPanelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
             this.SuspendLayout();
             // 
             // documentGroup1
@@ -566,14 +566,13 @@
             // 
             // siStatus
             // 
-            this.siStatus.Caption = "Some Status Info";
+            this.siStatus.Caption = "中国电力科学院";
             this.siStatus.Id = 31;
             this.siStatus.Name = "siStatus";
             this.siStatus.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // siInfo
             // 
-            this.siInfo.Caption = "Some Info";
             this.siInfo.Id = 32;
             this.siInfo.Name = "siInfo";
             this.siInfo.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -2560,7 +2559,7 @@
             // 
             // dockPanel3_Container
             // 
-            this.dockPanel3_Container.Controls.Add(this.flyoutPanel1);
+            this.dockPanel3_Container.Controls.Add(this.fpCurrent);
             this.dockPanel3_Container.Controls.Add(this.fpRouteHistory);
             this.dockPanel3_Container.Controls.Add(this.fpDesignRoute);
             this.dockPanel3_Container.Controls.Add(this.axTE3DWindow1);
@@ -2568,6 +2567,122 @@
             this.dockPanel3_Container.Name = "dockPanel3_Container";
             this.dockPanel3_Container.Size = new System.Drawing.Size(1061, 493);
             this.dockPanel3_Container.TabIndex = 0;
+            // 
+            // fpCurrent
+            // 
+            this.fpCurrent.Controls.Add(this.flyoutPanelControl3);
+            this.fpCurrent.Location = new System.Drawing.Point(883, 301);
+            this.fpCurrent.Name = "fpCurrent";
+            this.fpCurrent.Size = new System.Drawing.Size(175, 189);
+            this.fpCurrent.TabIndex = 3;
+            // 
+            // flyoutPanelControl3
+            // 
+            this.flyoutPanelControl3.Controls.Add(this.panelControl5);
+            this.flyoutPanelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flyoutPanelControl3.FlyoutPanel = this.fpCurrent;
+            this.flyoutPanelControl3.Location = new System.Drawing.Point(0, 0);
+            this.flyoutPanelControl3.Name = "flyoutPanelControl3";
+            this.flyoutPanelControl3.Size = new System.Drawing.Size(175, 189);
+            this.flyoutPanelControl3.TabIndex = 0;
+            // 
+            // panelControl5
+            // 
+            this.panelControl5.Controls.Add(this.labelControl13);
+            this.panelControl5.Controls.Add(this.labelControl14);
+            this.panelControl5.Controls.Add(this.labelControl11);
+            this.panelControl5.Controls.Add(this.labelControl12);
+            this.panelControl5.Controls.Add(this.labelControl9);
+            this.panelControl5.Controls.Add(this.labelControl10);
+            this.panelControl5.Controls.Add(this.labelControl7);
+            this.panelControl5.Controls.Add(this.labelControl8);
+            this.panelControl5.Controls.Add(this.labTaskNO);
+            this.panelControl5.Controls.Add(this.labelControl6);
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl5.Location = new System.Drawing.Point(2, 2);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(171, 185);
+            this.panelControl5.TabIndex = 0;
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Location = new System.Drawing.Point(73, 150);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(7, 14);
+            this.labelControl13.TabIndex = 9;
+            this.labelControl13.Text = "3";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(6, 150);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(60, 14);
+            this.labelControl14.TabIndex = 8;
+            this.labelControl14.Text = "飞行速度：";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(73, 118);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(64, 14);
+            this.labelControl11.TabIndex = 7;
+            this.labelControl11.Text = "2017-10-19";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(7, 118);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(60, 14);
+            this.labelControl12.TabIndex = 6;
+            this.labelControl12.Text = "测试时间：";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(73, 86);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(24, 14);
+            this.labelControl9.TabIndex = 5;
+            this.labelControl9.Text = "大疆";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(5, 86);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(72, 14);
+            this.labelControl10.TabIndex = 4;
+            this.labelControl10.Text = "无人机型号：";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(73, 56);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(28, 14);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "1265";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(6, 56);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(60, 14);
+            this.labelControl8.TabIndex = 2;
+            this.labelControl8.Text = "任务名称：";
+            // 
+            // labTaskNO
+            // 
+            this.labTaskNO.Location = new System.Drawing.Point(73, 26);
+            this.labTaskNO.Name = "labTaskNO";
+            this.labTaskNO.Size = new System.Drawing.Size(28, 14);
+            this.labTaskNO.TabIndex = 1;
+            this.labTaskNO.Text = "1265";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(6, 24);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(60, 14);
+            this.labelControl6.TabIndex = 0;
+            this.labelControl6.Text = "任务编号：";
             // 
             // fpRouteHistory
             // 
@@ -2881,122 +2996,6 @@
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
             dockingContainer1});
             // 
-            // flyoutPanel1
-            // 
-            this.flyoutPanel1.Controls.Add(this.flyoutPanelControl3);
-            this.flyoutPanel1.Location = new System.Drawing.Point(883, 301);
-            this.flyoutPanel1.Name = "flyoutPanel1";
-            this.flyoutPanel1.Size = new System.Drawing.Size(175, 189);
-            this.flyoutPanel1.TabIndex = 3;
-            // 
-            // flyoutPanelControl3
-            // 
-            this.flyoutPanelControl3.Controls.Add(this.panelControl5);
-            this.flyoutPanelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flyoutPanelControl3.FlyoutPanel = this.flyoutPanel1;
-            this.flyoutPanelControl3.Location = new System.Drawing.Point(0, 0);
-            this.flyoutPanelControl3.Name = "flyoutPanelControl3";
-            this.flyoutPanelControl3.Size = new System.Drawing.Size(175, 189);
-            this.flyoutPanelControl3.TabIndex = 0;
-            // 
-            // panelControl5
-            // 
-            this.panelControl5.Controls.Add(this.labelControl13);
-            this.panelControl5.Controls.Add(this.labelControl14);
-            this.panelControl5.Controls.Add(this.labelControl11);
-            this.panelControl5.Controls.Add(this.labelControl12);
-            this.panelControl5.Controls.Add(this.labelControl9);
-            this.panelControl5.Controls.Add(this.labelControl10);
-            this.panelControl5.Controls.Add(this.labelControl7);
-            this.panelControl5.Controls.Add(this.labelControl8);
-            this.panelControl5.Controls.Add(this.labTaskNO);
-            this.panelControl5.Controls.Add(this.labelControl6);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl5.Location = new System.Drawing.Point(2, 2);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(171, 185);
-            this.panelControl5.TabIndex = 0;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(6, 24);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(60, 14);
-            this.labelControl6.TabIndex = 0;
-            this.labelControl6.Text = "任务编号：";
-            // 
-            // labTaskNO
-            // 
-            this.labTaskNO.Location = new System.Drawing.Point(73, 26);
-            this.labTaskNO.Name = "labTaskNO";
-            this.labTaskNO.Size = new System.Drawing.Size(70, 14);
-            this.labTaskNO.TabIndex = 1;
-            this.labTaskNO.Text = "labelControl7";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(73, 56);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(70, 14);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "labelControl7";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(6, 56);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(60, 14);
-            this.labelControl8.TabIndex = 2;
-            this.labelControl8.Text = "任务名称：";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(73, 86);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(70, 14);
-            this.labelControl9.TabIndex = 5;
-            this.labelControl9.Text = "labelControl7";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(5, 86);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(72, 14);
-            this.labelControl10.TabIndex = 4;
-            this.labelControl10.Text = "无人机型号：";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(73, 118);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(70, 14);
-            this.labelControl11.TabIndex = 7;
-            this.labelControl11.Text = "labelControl7";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(7, 118);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(60, 14);
-            this.labelControl12.TabIndex = 6;
-            this.labelControl12.Text = "测试时间：";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(73, 150);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(70, 14);
-            this.labelControl13.TabIndex = 9;
-            this.labelControl13.Text = "labelControl7";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(6, 150);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(60, 14);
-            this.labelControl14.TabIndex = 8;
-            this.labelControl14.Text = "飞行速度：";
-            // 
             // AppForm
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -3056,6 +3055,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.axTEInformationWindow1)).EndInit();
             this.dockPanel3.ResumeLayout(false);
             this.dockPanel3_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fpCurrent)).EndInit();
+            this.fpCurrent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl3)).EndInit();
+            this.flyoutPanelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fpRouteHistory)).EndInit();
             this.fpRouteHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl2)).EndInit();
@@ -3084,13 +3090,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.axTE3DWindow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
-            this.flyoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl3)).EndInit();
-            this.flyoutPanelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            this.panelControl5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3205,7 +3204,7 @@
         private DevExpress.XtraBars.BarButtonItem bbiRouteFast;
         private DevExpress.XtraBars.BarButtonItem bbiRouteSlow;
         private DevExpress.XtraBars.BarButtonItem bbiRouteRestart;
-        private DevExpress.Utils.FlyoutPanel flyoutPanel1;
+        private DevExpress.Utils.FlyoutPanel fpCurrent;
         private DevExpress.Utils.FlyoutPanelControl flyoutPanelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl13;

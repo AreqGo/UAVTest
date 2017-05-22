@@ -43,6 +43,48 @@ namespace UAVApp
 
             string flyPath = Path.Combine(tAppRoot, @"data\default.fly");
             sgworld.Open(flyPath);
+
+            //sgworld.OnFrame += Sgworld_OnFrame;
+        }
+
+        IRouteWaypoint66 currentWaypoint = null;
+        private void Sgworld_OnFrame()
+        {
+            if(_route != null)
+            {
+                int waypointIndex = _route.Waypoints.Current;
+                var waypoint = _route.Waypoints.GetWaypoint(waypointIndex);
+                if(waypoint != currentWaypoint)
+                {
+                    var lon = waypoint.X;
+                    var lat = waypoint.Y;
+                    var alt = waypoint.Altitude;
+                    var speed = waypoint.Speed;
+                    var cVerticesArray = new double[] {
+                        lon,lat,alt,
+                        lon,lat,0,
+                    };
+
+                    string tempID = sgworld.ProjectTree.FindItem("Temp");
+                    var lineToGround = sgworld.Creator.CreatePolylineFromArray(cVerticesArray, 0xFF808080, AltitudeTypeCode.ATC_TERRAIN_RELATIVE, getGroupID("Temp"),"line");
+                    //var pLabel = sgworld.Creator.CreatePosition(lon, lat, alt / 2, AltitudeTypeCode.ATC_TERRAIN_RELATIVE);
+                    //SGLabelStyle eLabelStyle = SGLabelStyle.LS_DEFAULT;
+                    //// C2. Create label style
+                    //ILabelStyle66 cLabelStyle = sgworld.Creator.CreateLabelStyle(eLabelStyle);
+                    //// C3. Change label style settings
+                    //{
+                    //    double dAlpha = 0.5;        // 50% opacity
+                    //    var cBackgroundColor = cLabelStyle.BackgroundColor; // Get label style background color
+                    //    cBackgroundColor.FromBGRColor(0x0000FF);               // Set background to blue
+                    //    cBackgroundColor.SetAlpha(dAlpha);                      // Set transparency to 50%
+                    //    cLabelStyle.BackgroundColor = cBackgroundColor;         // Set label style background color
+                    //    cLabelStyle.FontName = "Arial";                         // Set font name to Arial
+                    //    cLabelStyle.Italic = true;                              // Set label style font to italic
+                    //    cLabelStyle.Scale = 3;                                  // Set label style scale
+                    //}
+                    //sgworld.Creator.CreateLabel(pLabel, alt.ToString("0.00"), null, cLabelStyle, getGroupID("Temp"), "LABEL");
+                }
+            }
         }
 
         /// <summary>
@@ -249,7 +291,7 @@ namespace UAVApp
                 string[] val = System.Text.RegularExpressions.Regex.Split(line, @"\s{4,}");
                 double _lat = Double.Parse(val[1]);
                 double _lon = Double.Parse(val[2]);
-                double _alt = Double.Parse(val[3]);
+                double _alt = Double.Parse(val[3])-37.15;
                 lineArray.Add(_lon);
                 lineArray.Add(_lat);
                 lineArray.Add(_alt);
@@ -261,7 +303,6 @@ namespace UAVApp
                 pps.Add(pp);
             }
             var _routeLine = sgworld.Creator.CreatePolylineFromArray(lineArray.ToArray(), -16711936, AltitudeTypeCode.ATC_TERRAIN_RELATIVE, flyGroupID,"设计航线");
-            
         }
 
         List<PolylinePoint> ppf = new List<PolylinePoint>();
@@ -281,12 +322,16 @@ namespace UAVApp
                     string[] val = System.Text.RegularExpressions.Regex.Split(line, @"\s");
                     double _lat = Double.Parse(val[1]);
                     double _lon = Double.Parse(val[2]);
-                    double _alt = Double.Parse(val[3]);
-                    lineArray.Add(_lon);
-                    lineArray.Add(_lat);
-                    lineArray.Add(_alt);
-                    IRouteWaypoint66 iRWP = sgworld.Creator.CreateRouteWaypoint(_lon, _lat, _alt, 0.1);
-                    lr.Add(iRWP);
+                    double _alt = Double.Parse(val[3])-37.15;
+
+                    if(i%4 == 0)
+                    {
+                        lineArray.Add(_lon);
+                        lineArray.Add(_lat);
+                        lineArray.Add(_alt);
+                        IRouteWaypoint66 iRWP = sgworld.Creator.CreateRouteWaypoint(_lon, _lat, _alt, 1);
+                        lr.Add(iRWP);
+                    }
 
                     PolylinePoint pp = new PolylinePoint();
                     pp.X = _lon;
@@ -306,11 +351,12 @@ namespace UAVApp
             var _routeLine = sgworld.Creator.CreatePolylineFromArray(_lineArray.ToArray(), -1000000, AltitudeTypeCode.ATC_TERRAIN_RELATIVE, flyGroupID, "实际航线");
             _route = sgworld.Creator.CreateDynamicObject(_lr.ToArray(), DynamicMotionStyle.MOTION_MANUAL, DynamicObjectType.DYNAMIC_3D_MODEL, _modelFile,0.05,AltitudeTypeCode.ATC_TERRAIN_RELATIVE, flyGroupID,"模拟飞行");
             _route.CircularRoute = false;
-            _route.TurnSpeed = 0.1;
+            _route.TurnSpeed = 0;
             _route.Acceleration = 0;
             _route.Position.Distance = 5;
             _route.RestartRoute();
             sgworld.Navigate.FlyTo(_route);
+            fpCurrent.ShowPopup();
         }
 
         private bool isGroupExist(string gName)

@@ -21,3 +21,6 @@ E:\HRQ\UAVApp\WatchFolderApp\bin\Debug\System.Data.SQLite.xml
 E:\HRQ\UAVApp\WatchFolderApp\obj\Debug\WatchFolderApp.csprojResolveAssemblyReference.cache
 E:\HRQ\UAVApp\WatchFolderApp\obj\Debug\WatchFolderApp.exe
 E:\HRQ\UAVApp\WatchFolderApp\obj\Debug\WatchFolderApp.pdb
+D:\13-github\UAVApp\WatchFolderApp\bin\Debug\WatchFolderApp.exe.config
+D:\13-github\UAVApp\WatchFolderApp\obj\Debug\WatchFolderApp.exe
+D:\13-github\UAVApp\WatchFolderApp\obj\Debug\WatchFolderApp.pdb
