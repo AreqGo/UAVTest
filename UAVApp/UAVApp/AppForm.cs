@@ -44,7 +44,7 @@ namespace UAVApp
             string flyPath = Path.Combine(tAppRoot, @"data\default.fly");
             sgworld.Open(flyPath);
 
-            //sgworld.OnFrame += Sgworld_OnFrame;
+            sgworld.OnFrame += Sgworld_OnFrame;
         }
 
         IRouteWaypoint66 currentWaypoint = null;
@@ -67,22 +67,6 @@ namespace UAVApp
 
                     string tempID = sgworld.ProjectTree.FindItem("Temp");
                     var lineToGround = sgworld.Creator.CreatePolylineFromArray(cVerticesArray, 0xFF808080, AltitudeTypeCode.ATC_TERRAIN_RELATIVE, getGroupID("Temp"),"line");
-                    //var pLabel = sgworld.Creator.CreatePosition(lon, lat, alt / 2, AltitudeTypeCode.ATC_TERRAIN_RELATIVE);
-                    //SGLabelStyle eLabelStyle = SGLabelStyle.LS_DEFAULT;
-                    //// C2. Create label style
-                    //ILabelStyle66 cLabelStyle = sgworld.Creator.CreateLabelStyle(eLabelStyle);
-                    //// C3. Change label style settings
-                    //{
-                    //    double dAlpha = 0.5;        // 50% opacity
-                    //    var cBackgroundColor = cLabelStyle.BackgroundColor; // Get label style background color
-                    //    cBackgroundColor.FromBGRColor(0x0000FF);               // Set background to blue
-                    //    cBackgroundColor.SetAlpha(dAlpha);                      // Set transparency to 50%
-                    //    cLabelStyle.BackgroundColor = cBackgroundColor;         // Set label style background color
-                    //    cLabelStyle.FontName = "Arial";                         // Set font name to Arial
-                    //    cLabelStyle.Italic = true;                              // Set label style font to italic
-                    //    cLabelStyle.Scale = 3;                                  // Set label style scale
-                    //}
-                    //sgworld.Creator.CreateLabel(pLabel, alt.ToString("0.00"), null, cLabelStyle, getGroupID("Temp"), "LABEL");
                 }
             }
         }
@@ -356,7 +340,7 @@ namespace UAVApp
             _route.Position.Distance = 5;
             _route.RestartRoute();
             sgworld.Navigate.FlyTo(_route);
-            fpCurrent.ShowPopup();
+            //fpCurrent.ShowPopup();
         }
 
         private bool isGroupExist(string gName)
