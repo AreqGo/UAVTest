@@ -122,12 +122,12 @@ namespace Pipeline.Client.Forms
 
         private double[] getDistance(double lon1,double lat1,double lon2,double lat2)
         {
-            var HDis = sgworld.CoordServices.GetDistance(lon1, lat1, lon2, lat1);
+            var HDis = sgworld.CoordServices.GetDistance(lon1, (lat1+lat2)/2, lon2, (lat1 + lat2) / 2);
             if(lon2 < lon1)
             {
                 HDis = -HDis;
             }
-            var VDis = sgworld.CoordServices.GetDistance(lon1, lat1, lon1, lat2);
+            var VDis = sgworld.CoordServices.GetDistance((lon1+lon2)/2, lat1, (lon1 + lon2) / 2, lat2);
             if(lat2 < lat1)
             {
                 VDis = -VDis;
